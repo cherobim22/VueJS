@@ -20,7 +20,7 @@
           <tr>
             <th>NAME</th>
             <th>DESCRIPTION</th>
-            <th>OPÇÕES</th>
+            <th>OPTIONS</th>
           </tr>
         </thead>
         <tbody>
