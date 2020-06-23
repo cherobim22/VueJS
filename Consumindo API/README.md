@@ -1,4 +1,4 @@
-# Consumindo API
+# frontend
 
 ## Project setup
 ```
@@ -22,5 +22,5 @@ npm run lint
 
 ### Axios
 
-`npm install axios`
+npm install axios
 
