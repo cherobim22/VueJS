@@ -14,6 +14,7 @@
           
           <button class="waves-effect waves-light btn-small">Salvar<i class="material-icons left">save</i></button>
       </form>
+      <button class="waves-effect waves-light btn-small" @click="teste(url)">google<i class="material-icons left">save</i></button>
       <table>
         <thead>
           <tr>
@@ -26,7 +27,6 @@
           <tr v-for="tasks of task" :key="tasks.id">
             <td>{{tasks.name}}</td>
             <td>{{tasks.description}}</td>
-            
             <td>
               <button class="waves-effect btn-small blue darken-1"><i class="material-icons">create</i></button>
               <button class="waves-effect btn-small red darken-1"><i class="material-icons">delete_sweep</i></button>
@@ -51,15 +51,21 @@ export default {
           description:''
         },
 
-        task:[]
+        task:[],
+
+        url:''
       }
+    },
+
+    teste: function (){
+      console.log('teste click');
     },
 
   mounted(){
    tasks.listar()
    .then(response => {
      console.log(response.data)
-     this.task = response.data;
+     this.url = response.data;
     })
     },
 
@@ -68,9 +74,11 @@ export default {
         tasks.salvar(this.todos).then(response => {
           console.log(response)
         })
+      },
+       teste (aa){
+      window.open(aa, 'janela', 'width=795, height=590, top=100, left=10, scrollbars=no, status=no, toolbar=no, location=no, menubar=no, resizable=no, fullscreen=no')
+    },
 
-
-      }
     }
 
 }
